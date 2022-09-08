@@ -1,7 +1,7 @@
 ---
 title: "Data Wrangling - Part I"
 subtitle: "StatPREP R Workshops"
-author: "Your Name"
+author: "America Olivo"
 output: html_document
 ---
 
@@ -202,8 +202,12 @@ See if you can answer these questions:
 1. How many movies were released in 1995?
 
 ```{r}
-
+mov1995 <- movies %>%
+filter(year==1995)
+mov1995
 ```
+
+There are 1,248 mvoies produced in the year 1995.
 
 2. Which Comedies with an MPAA rating, over 120 minutes have a rating above 8?
 
