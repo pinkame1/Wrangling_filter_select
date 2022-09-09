@@ -222,10 +222,16 @@ print (movies_2000 $title)
 3. Create a subset of only Harry Potter movies with the title, rating, budget, and votes. Which movies are included in this data? Which is highest rated? Which has the most votes on imdb.com?
 
 ```{r}
+Harry_Potter <- movies %>%
+  filter (str_detect(title, "Harry Potter")) %>%
+    select (title, rating, budget, votes) %>%
+  arrange(desc(rating))
+Harry_Potter
+
 
 ```
 
-The first three "Harry Potter" movies, " Soc
+The first three Harry Potter movies,  Sorcerer's stones, Chamber of Secrets, and Prisoner of Azkaban.
 
 4. What is the highest budget for a movie that is an Animation or Comedy with at least 100 votes?
 
