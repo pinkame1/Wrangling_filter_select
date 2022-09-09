@@ -225,11 +225,19 @@ print (movies_2000 $title)
 
 ```
 
+The first three "Harry Potter" movies, " Soc
+
 4. What is the highest budget for a movie that is an Animation or Comedy with at least 100 votes?
 
 ```{r}
-
+movies101 <- movies %>%
+filter (votes >= 100) %>%
+filter(Animation == 1 | Comedy == 1) %>%
+arrange(desc(budget))  
+print (movies101$budget)
 ```
+
+The highest budget movie that is an Animation or Comedy with at least 100 votes is $170000000.
 
 5. Is your favorite movie in the dataset? What other questions could you ask or answer using `filter()`, `select()`, and `arrange()`?
 
